@@ -1,12 +1,12 @@
 const message = document.querySelector('#message');
 var choices = document.querySelectorAll('.choice p');
 
-comp_choice = Math.floor(Math.random() * 3);
-options = ['rock', 'paper', 'scissors'];
+var comp_choice = Math.floor(Math.random() * 3);
+const options = ['rock', 'paper', 'scissors'];
 
-choices.forEach((elem, i) => { // same as doing function (elem, i) { ... }
+choices.forEach(function (elem, i) { // same as doing function (elem, i) { ... }
     elem.value = i;
-    elem.addEventListener('click', (e) => { // same as doing function (event) { ... }
+    elem.addEventListener('click', function (e) { // same as doing function (event) { ... }
         if (elem.value == 0 && comp_choice == 2 || elem.value > comp_choice){
             message.textContent = `Computer chose ${options[comp_choice]}. User wins!`;
         } else if (elem.value == comp_choice) {
@@ -14,7 +14,8 @@ choices.forEach((elem, i) => { // same as doing function (elem, i) { ... }
         } else {
             message.textContent = `Computer chose ${options[comp_choice]}. Computer wins!`;
         }
-        setTimeout(() => {
+
+        setTimeout(function () {
             message.textContent = 'Pick your poison!';
             comp_choice = Math.floor(Math.random() * 3);
         }, 2000);
