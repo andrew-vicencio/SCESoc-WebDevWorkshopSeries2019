@@ -53,3 +53,21 @@ div.result {
     text-align: center;
     font-size: 40px;
 }
+
+.winner {
+    background: green;
+    transition: all 0.3s ease;
+}
+
+.winner:hover {
+    background: green;
+}
+
+.loser {
+    background: red;
+}
+
+.loser:hover {
+    background: red;
+    transition: all 0.3s ease;
+}
