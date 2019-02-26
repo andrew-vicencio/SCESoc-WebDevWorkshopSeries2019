@@ -1,0 +1,27 @@
+img {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+    width: 300px;
+    height: 300px;
+}
+
+td img {
+    margin: 0 auto;
+}
+
+p {
+    font-size: 3em;
+}
