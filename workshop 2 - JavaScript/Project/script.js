@@ -7,7 +7,7 @@ const options = ['rock', 'paper', 'scissors'];
 choices.forEach(function (elem, i) { // same as doing function (elem, i) { ... }
     elem.value = i;
     elem.addEventListener('click', function (e) { // same as doing function (event) { ... }
-        if (this.value == 0 && comp_choice == 2 || elem.value > comp_choice){
+        if (this.value == 0 && comp_choice == 2 || this.value == comp_choice + 1){
             message.textContent = `Computer chose ${options[comp_choice]}. User wins!`;
             this.classList.add('winner');
         } else if (elem.value == comp_choice) {
@@ -20,11 +20,7 @@ choices.forEach(function (elem, i) { // same as doing function (elem, i) { ... }
         setTimeout(function () {
             message.textContent = 'Pick your poison!';
             comp_choice = Math.floor(Math.random() * 3);
-            elem.classList.remove('winner');
-            elem.classList.remove('loser');
+            elem.classList = 'choice';
         }, 3000);
     });
 });
-
-var element = document.querySelector('h1');
-element.addEventListener('click', this.textContent = 'Hey Andrew!');
