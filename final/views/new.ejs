@@ -1,0 +1,17 @@
+<% include header %>
+    <form action="/" method="POST" class="ui form">
+        <div class="field">
+            <input type="text" name="post[title]" placeholder="Post Title" required>
+        </div>
+
+        <div class="field">
+            <input type="text" name="post[image]" placeholder="Post Image URL" required>
+        </div>
+
+        <div class="field">
+            <textarea name="post[body]" required></textarea>
+        </div>
+        
+        <button class="ui basic dark button">Submit</button>
+    </form>
+<% include footer %>

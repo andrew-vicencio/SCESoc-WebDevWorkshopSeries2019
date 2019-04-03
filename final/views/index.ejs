@@ -1,0 +1,16 @@
+<% include header %>
+    <div class="ui main text container">
+        <div class="ui top attached segment">
+            <div class="ui divided items">
+                <% posts.forEach(function(post) {%>
+                    <div class="item">
+                        <div class="content">
+                            <div class="header"><%= post.title %></div>
+                            <div class="description"><%= post.body %></div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+<% include footer %>
