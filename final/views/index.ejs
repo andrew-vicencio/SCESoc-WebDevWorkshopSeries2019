@@ -4,6 +4,9 @@
             <div class="ui divided items">
                 <% posts.forEach(function(post) {%>
                     <div class="item">
+                        <div class="image">
+                            <img src="<%= post.image %>" alt="Blog post image">
+                        </div>
                         <div class="content">
                             <div class="header"><%= post.title %></div>
                             <div class="description"><%= post.body %></div>
